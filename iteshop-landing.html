@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!-- 頁面基本信息 -->
+    <title>ITeSHOP 香港｜600+設計師品牌限時優惠</title>
+    <meta name="description" content="探索亞洲領先潮流平台ITeSHOP，600+國際設計師品牌，正品保障，滿$300免運。立即選購享受獨家優惠！">
+    <meta name="keywords" content="ITeSHOP,香港潮牌,設計師品牌,街頭潮流,限量發售,正品保障">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="zh_HK">
+    <meta property="og:title" content="ITeSHOP 香港｜600+設計師品牌限時優惠">
+    <meta property="og:description" content="探索亞洲領先潮流平台，600+國際設計師品牌，正品保障，滿$300免運">
+    <meta property="og:image" content="{{OG_IMAGE_URL}}">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="{{PAGE_URL}}">
+    <meta property="og:site_name" content="ITeSHOP 優惠導購">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ITeSHOP 香港｜600+設計師品牌限時優惠">
+    <meta name="twitter:description" content="探索亞洲領先潮流平台，600+國際設計師品牌，正品保障">
+    <meta name="twitter:image" content="{{OG_IMAGE_URL}}">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="{{PAGE_URL}}">
+    
+    <style>
+        /* Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary-black: #000000;
+            --primary-white: #FFFFFF;
+            --gray-light: #F5F5F5;
+            --gray-medium: #888888;
+            --gray-dark: #333333;
+            --accent-red: #FF0000;
+            --success-green: #00C853;
+            --border-color: #E0E0E0;
+            --shadow-light: 0 2px 8px rgba(0,0,0,0.08);
+            --shadow-medium: 0 4px 16px rgba(0,0,0,0.12);
+            --max-width: 1200px;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--gray-dark);
+            background-color: var(--primary-white);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        h1, h2, h3 {
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+        
+        /* Navigation */
+        .nav-sticky {
+            position: sticky;
+            top: 0;
+            background: var(--primary-white);
+            border-bottom: 1px solid var(--border-color);
+            z-index: 100;
+            box-shadow: var(--shadow-light);
+        }
+        
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+        }
+        
+        .nav-logo {
+            font-size: 20px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            font-size: 14px;
+            color: var(--gray-medium);
+            transition: color 0.2s;
+        }
+        
+        .nav-links a:hover,
+        .nav-links a:focus {
+            color: var(--primary-black);
+            outline: 2px solid transparent;
+            outline-offset: 2px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+            color: var(--primary-white);
+            padding: 60px 0 80px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: clamp(28px, 5vw, 42px);
+            margin-bottom: 16px;
+            letter-spacing: -0.5px;
+        }
+        
+        .hero-subtitle {
+            font-size: clamp(16px, 3vw, 20px);
+            color: rgba(255,255,255,0.85);
+            margin-bottom: 32px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-group {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: 2px solid transparent;
+            text-align: center;
+            min-width: 160px;
+        }
+        
+        .btn:focus {
+            outline: 3px solid var(--accent-red);
+            outline-offset: 2px;
+        }
+        
+        .btn-primary {
+            background: var(--primary-white);
+            color: var(--primary-black);
+            border-color: var(--primary-white);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(255,255,255,0.25);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary-white);
+            border-color: var(--primary-white);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--primary-white);
+            color: var(--primary-black);
+        }
+        
+        /* Trust Badges */
+        .trust-badges {
+            display: flex;
+            gap: 24px;
+            justify-content: center;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .badge {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            color: rgba(255,255,255,0.9);
+        }
+        
+        .badge-icon {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+        }
+        
+        /* Features Section */
+        .features {
+            padding: 60px 0;
+            background: var(--gray-light);
+        }
+        
+        .features h2 {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 40px;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 24px;
+            margin-bottom: 40px;
+        }
+        
+        .feature-card {
+            background: var(--primary-white);
+            padding: 32px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: var(--shadow-light);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-medium);
+        }
+        
+        .feature-icon {
+            width: 48px;
+            height: 48px;
+            margin: 0 auto 16px;
+            fill: var(--primary-black);
+        }
+        
+        .feature-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        
+        .feature-desc {
+            color: var(--gray-medium);
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        
+        /* Products Section */
+        .products {
+            padding: 60px 0;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .section-header h2 {
+            font-size: 32px;
+            margin-bottom: 12px;
+        }
+        
+        .section-header p {
+            color: var(--gray-medium);
+            font-size: 16px;
+        }
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 24px;
+            margin-bottom: 40px;
+        }
+        
+        .product-card {
+            background: var(--primary-white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow-light);
+            transition: all 0.3s;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-medium);
+        }
+        
+        .product-image {
+            position: relative;
+            padding-top: 125%; /* 4:5 aspect ratio */
+            background: var(--gray-light);
+            overflow: hidden;
+        }
+        
+        .product-image img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .product-badge {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: var(--accent-red);
+            color: var(--primary-white);
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        
+        .product-info {
+            padding: 16px;
+        }
+        
+        .product-brand {
+            font-size: 12px;
+            color: var(--gray-medium);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+        }
+        
+        .product-name {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            line-height: 1.3;
+        }
+        
+        .product-price {
+            font-size: 14px;
+            color: var(--gray-medium);
+        }
+        
+        /* Offers Section */
+        .offers {
+            padding: 60px 0;
+            background: linear-gradient(135deg, #FFF8E1 0%, #FFECB3 100%);
+        }
+        
+        .offer-banner {
+            background: var(--primary-white);
+            border-radius: 12px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: var(--shadow-medium);
+        }
+        
+        .offer-label {
+            display: inline-block;
+            background: var(--accent-red);
+            color: var(--primary-white);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+        
+        .offer-title {
+            font-size: 28px;
+            margin-bottom: 12px;
+        }
+        
+        .offer-desc {
+            color: var(--gray-medium);
+            margin-bottom: 24px;
+            font-size: 16px;
+        }
+        
+        .timer-note {
+            font-size: 12px;
+            color: var(--gray-medium);
+            margin-top: 16px;
+        }
+        
+        /* FAQ Section */
+        .faq {
+            padding: 60px 0;
+            background: var(--gray-light);
+        }
+        
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            background: var(--primary-white);
+            border-radius: 8px;
+            margin-bottom: 16px;
+            overflow: hidden;
+            box-shadow: var(--shadow-light);
+        }
+        
+        .faq-question {
+            padding: 20px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.3s;
+        }
+        
+        .faq-question:hover {
+            background: var(--gray-light);
+        }
+        
+        .faq-toggle {
+            font-size: 20px;
+            transition: transform 0.3s;
+        }
+        
+        .faq-item.active .faq-toggle {
+            transform: rotate(45deg);
+        }
+        
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s, padding 0.3s;
+        }
+        
+        .faq-item.active .faq-answer {
+            padding: 0 20px 20px;
+            max-height: 300px;
+        }
+        
+        /* Disclosure Section */
+        .disclosure {
+            background: #FFF3E0;
+            padding: 24px;
+            margin: 40px 0;
+            border-radius: 8px;
+            border-left: 4px solid #FF9800;
+        }
+        
+        .disclosure h3 {
+            font-size: 18px;
+            margin-bottom: 12px;
+            color: var(--gray-dark);
+        }
+        
+        .disclosure p {
+            font-size: 14px;
+            line-height: 1.6;
+            color: var(--gray-medium);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--primary-black);
+            color: var(--primary-white);
+            padding: 40px 0 20px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 32px;
+            margin-bottom: 32px;
+        }
+        
+        .footer-section h4 {
+            font-size: 16px;
+            margin-bottom: 16px;
+            color: var(--primary-white);
+        }
+        
+        .footer-section p,
+        .footer-section a {
+            font-size: 14px;
+            color: rgba(255,255,255,0.7);
+            line-height: 1.8;
+            transition: color 0.3s;
+        }
+        
+        .footer-section a:hover {
+            color: var(--primary-white);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 16px;
+            margin-top: 16px;
+        }
+        
+        .social-link {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+        
+        .social-link:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-2px);
+        }
+        
+        .footer-bottom {
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            text-align: center;
+            font-size: 12px;
+            color: rgba(255,255,255,0.5);
+        }
+        
+        /* Share Buttons */
+        .share-section {
+            text-align: center;
+            padding: 40px 0;
+        }
+        
+        .share-title {
+            font-size: 18px;
+            margin-bottom: 16px;
+            color: var(--gray-dark);
+        }
+        
+        .share-buttons {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .share-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.3s;
+            border: 1px solid var(--border-color);
+            background: var(--primary-white);
+        }
+        
+        .share-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-light);
+        }
+        
+        /* Mobile Optimizations */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero {
+                padding: 40px 0 60px;
+            }
+            
+            .cta-group {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 280px;
+            }
+            
+            .trust-badges {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .products-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 16px;
+            }
+            
+            .offer-banner {
+                padding: 24px;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .social-links {
+                justify-content: center;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Accessibility */
+        :focus-visible {
+            outline: 3px solid var(--accent-red);
+            outline-offset: 2px;
+        }
+        
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Sticky Navigation -->
+    <nav class="nav-sticky">
+        <div class="container">
+            <div class="nav-content">
+                <div class="nav-logo">ITeSHOP 優惠導購</div>
+                <ul class="nav-links">
+                    <li><a href="#features">為何選擇</a></li>
+                    <li><a href="#products">精選商品</a></li>
+                    <li><a href="#offers">限時優惠</a></li>
+                    <li><a href="#faq">常見問題</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>600+國際設計師品牌 獨家限時優惠</h1>
+            <p class="hero-subtitle">亞洲領先潮流平台ITeSHOP，正品保障，滿HK$300免運，每日上新限量發售</p>
+            
+            <div class="cta-group">
+                <a href="https://www.linkhaitao.com/index.php?mod=lhdeal&track=a12cwBqzuHpVE_bRYxPzYjVZ_afBYPld7tofOr_bddfqIVYu2v0f_ajVb90cVDpy9EXYWiRH9g_c_c&new=https%3A%2F%2Fhk.iteshop.com%2F" target="_blank" rel="sponsored nofollow noopener" class="btn btn-primary" aria-label="立即前往ITeSHOP官網選購">
+                    立即選購
+                </a>
+                <a href="https://www.linkhaitao.com/index.php?mod=lhdeal&track=a12cwBqzuHpVE_bRYxPzYjVZ_afBYPld7tofOr_bddfqIVYu2v0f_ajVb90cVDpy9EXYWiRH9g_c_c&new=https%3A%2F%2Fhk.iteshop.com%2F" target="_blank" rel="sponsored nofollow noopener" class="btn btn-secondary" aria-label="查看ITeSHOP精選折扣">
+                    查看精選折扣
+                </a>
+            </div>
+            
+            <div class="trust-badges">
+                <div class="badge">
+                    <svg class="badge-icon" viewBox="0 0 24 24">
+                        <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
+                    </svg>
+                    <span>正品保障</span>
+                </div>
+                <div class="badge">
+                    <svg class="badge-icon" viewBox="0 0 24 24">
+                        <path d="M20 6h-2.18c.11-.31.18-.65.18-1a2.996 2.996 0 00-5.5-1.65l-.5.67-.5-.68C10.96 2.54 10.05 2 9 2 7.34 2 6 3.34 6 5c0 .35.07.69.18 1H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2z"/>
+                    </svg>
+                    <span>滿$300免運</span>
+                </div>
+                <div class="badge">
+                    <svg class="badge-icon" viewBox="0 0 24 24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                    </svg>
+                    <span>7天退貨</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2>為何選擇 ITeSHOP</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <svg class="feature-icon" viewBox="0 0 24 24">
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                    </svg>
+                    <h3 class="feature-title">600+設計師品牌</h3>
+                    <p class="feature-desc">從Acne Studios到OFF-WHITE，匯集全球最受追捧的潮流品牌</p>
+                </div>
+                
+                <div class="feature-card">
+                    <svg class="feature-icon" viewBox="0 0 24 24">
+                        <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/>
+                    </svg>
+                    <h3 class="feature-title">官方授權正品</h3>
+                    <p class="feature-desc">所有商品均為品牌官方授權，香港上市公司營運保障</p>
+                </div>
+                
+                <div class="feature-card">
+                    <svg class="feature-icon" viewBox="0 0 24 24">
+                        <path d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/>
+                    </svg>
+                    <h3 class="feature-title">安全便捷支付</h3>
+                    <p class="feature-desc">支援信用卡、PayPal、支付寶等多種支付方式</p>
+                </div>
+                
+                <div class="feature-card">
+                    <svg class="feature-icon" viewBox="0 0 24 24">
+                        <path d="M18 7l-1.41-1.41-6.34 6.34 1.41 1.41L18 7zm4.24-1.41L11.66 16.17 7.48 12l-1.41 1.41L11.66 19l12-12-1.42-1.41zM.41 13.41L6 19l1.41-1.41L1.83 12 .41 13.41z"/>
+                    </svg>
+                    <h3 class="feature-title">限量獨家發售</h3>
+                    <p class="feature-desc">I.T獨家、線上獨家、全球獨家限量單品每日上新</p>
+                </div>
+                
+                <div class="feature-card">
+                    <svg class="feature-icon" viewBox="0 0 24 24">
+                        <path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 4h5v8l-2.5-1.5L6 12V4z"/>
+                    </svg>
+                    <h3 class="feature-title">順豐速運配送</h3>
+                    <p class="feature-desc">與順豐合作，5個工作日內送達，訂單全程可追蹤</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="products">
+        <div class="container">
+            <div class="section-header">
+                <h2>本週精選潮品</h2>
+                <p>價格與庫存以官網為準</p>
+            </div>
+            
+            <div class="products-grid">
+                <!-- Product Card 1 -->
+                <a href="https://www.linkhaitao.com/index.php?mod=lhdeal&track=a12cwBqzuHpVE_bRYxPzYjVZ_afBYPld7tofOr_bddfqIVYu2v0f_ajVb90cVDpy9EXYWiRH9g_c_c&new=https%3A%2F%2Fhk.iteshop.com%2F" target="_blank" rel="sponsored nofollow noopener" style="text-decoration: none; color: inherit;">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="图片1.png" 
+                             alt="OFF-WHITE 設計師品牌衛衣" 
+                             loading="lazy"
+                             width="400" 
+                             height="500">
+                        <span class="product-badge">獨家發售</span>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-price">價格以官網為準</p>
+                    </div>
+                </div>
+                </a>
+                
+                <!-- Product Card 2 -->
+                <a href="https://www.linkhaitao.com/index.php?mod=lhdeal&track=a12cwBqzuHpVE_bRYxPzYjVZ_afBYPld7tofOr_bddfqIVYu2v0f_ajVb90cVDpy9EXYWiRH9g_c_c&new=https%3A%2F%2Fhk.iteshop.com%2F" target="_blank" rel="sponsored nofollow noopener" style="text-decoration: none; color: inherit;">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="图片2.png" 
+                             alt="Acne Studios 設計師品牌外套" 
+                             loading="lazy"
+                             width="400" 
+                             height="500">
+                        <span class="product-badge">新品上架</span>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-price">價格以官網為準</p>
+                    </div>
+                </div>
+                </a>
+                
+                <!-- Product Card 3 -->
+                <a href="https://www.linkhaitao.com/index.php?mod=lhdeal&track=a12cwBqzuHpVE_bRYxPzYjVZ_afBYPld7tofOr_bddfqIVYu2v0f_ajVb90cVDpy9EXYWiRH9g_c_c&new=https%3A%2F%2Fhk.iteshop.com%2F" target="_blank" rel="sponsored nofollow noopener" style="text-decoration: none; color: inherit;">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="图片3.png" 
+                             alt="BAPE 潮流品牌運動鞋" 
+                             loading="lazy"
+                             width="400" 
+                             height="500">
+                        <span class="product-badge">限量發售</span>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-price">價格以官網為準</p>
+                    </div>
+                </div>
+                </a>
+                
+                <!-- Product Card 4 -->
+                <a href="https://www.linkhaitao.com/index.php?mod=lhdeal&track=a12cwBqzuHpVE_bRYxPzYjVZ_afBYPld7tofOr_bddfqIVYu2v0f_ajVb90cVDpy9EXYWiRH9g_c_c&new=https%3A%2F%2Fhk.iteshop.com%2F" target="_blank" rel="sponsored nofollow noopener" style="text-decoration: none; color: inherit;">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="图片4.png" 
+                             alt="Stone Island 設計師品牌背包" 
+                             loading="lazy"
+                             width="400" 
+                             height="500">
+                        <span class="product-badge">熱賣商品</span>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-price">價格以官網為準</p>
+                    </div>
+                </div>
+                </a>
+                
+                <!-- Product Card 5 -->
+                <a href="https://www.linkhaitao.com/index.php?mod=lhdeal&track=a12cwBqzuHpVE_bRYxPzYjVZ_afBYPld7tofOr_bddfqIVYu2v0f_ajVb90cVDpy9EXYWiRH9g_c_c&new=https%3A%2F%2Fhk.iteshop.com%2F" target="_blank" rel="sponsored nofollow noopener" style="text-decoration: none; color: inherit;">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="图片5.png" 
+                             alt="Carhartt WIP 街頭品牌褲子" 
+                             loading="lazy"
+                             width="400" 
+                             height="500">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-price">價格以官網為準</p>
+                    </div>
+                </div>
+                </a>
+                
+                <!-- Product Card 6 -->
+                <a href="https://www.linkhaitao.com/index.php?mod=lhdeal&track=a12cwBqzuHpVE_bRYxPzYjVZ_afBYPld7tofOr_bddfqIVYu2v0f_ajVb90cVDpy9EXYWiRH9g_c_c&new=https%3A%2F%2Fhk.iteshop.com%2F" target="_blank" rel="sponsored nofollow noopener" style="text-decoration: none; color: inherit;">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="图片6.png" 
+                             alt="WTAPS 日系潮牌T恤" 
+                             loading="lazy"
+                             width="400" 
+                             height="500">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-price">價格以官網為準</p>
+                    </div>
+                </div>
+                </a>
+            </div>
+            
+            <div style="text-align: center;">
+                <a href="https://www.linkhaitao.com/index.php?mod=lhdeal&track=a12cwBqzuHpVE_bRYxPzYjVZ_afBYPld7tofOr_bddfqIVYu2v0f_ajVb90cVDpy9EXYWiRH9g_c_c&new=https%3A%2F%2Fhk.iteshop.com%2F" target="_blank" rel="sponsored nofollow noopener" class="btn btn-primary" aria-label="查看更多ITeSHOP商品">
+                    查看更多商品
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Offers Section -->
+    <section class="offers" id="offers">
+        <div class="container">
+            <div class="offer-banner">
+                <span class="offer-label">本週精選</span>
+                <h2 class="offer-title">限時優惠活動</h2>
+                <p class="offer-desc">精選品牌折扣，每日更新限量發售</p>
+                
+                <div class="cta-group">
+                    <a href="https://www.linkhaitao.com/index.php?mod=lhdeal&track=a12cwBqzuHpVE_bRYxPzYjVZ_afBYPld7tofOr_bddfqIVYu2v0f_ajVb90cVDpy9EXYWiRH9g_c_c&new=https%3A%2F%2Fhk.iteshop.com%2F" target="_blank" rel="sponsored nofollow noopener" class="btn btn-primary" aria-label="查看ITeSHOP全部優惠">
+                        查看全部優惠
+                    </a>
+                </div>
+                
+                <p class="timer-note">*優惠截止時間：香港時間午夜結束（以官網為準）</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2>常見問題</h2>
+            </div>
+            
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>這是ITeSHOP的官方網站嗎？</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>本頁面為獨立優惠導購頁面，並非ITeSHOP官方網站。我們整理並分享ITeSHOP的優惠信息，所有商品購買需前往ITeSHOP官方網站完成。</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>價格和折扣信息準確嗎？</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>所有價格、折扣和庫存信息均以ITeSHOP官方網站為準。建議您點擊連結前往官網查看最新的價格和優惠詳情。</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>配送需要多長時間？</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>ITeSHOP與順豐速運合作，一般5個工作日內配送到香港地區。訂單滿HK$300可享免運費。具體配送時間和政策請以官網為準。</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>可以退換貨嗎？</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>ITeSHOP提供7天無理由退貨服務（僅限香港地區），商品需保持原始狀態。美妝產品、貼身衣物等特定類別不支持退換。詳細退換貨政策請參考官網說明。</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>付款方式安全嗎？</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>ITeSHOP支援Visa、MasterCard、American Express、PayPal、支付寶等多種安全支付方式。所有交易均在ITeSHOP官網完成，採用SSL加密技術保護您的支付信息。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Disclosure Section -->
+    <section class="container">
+        <div class="disclosure">
+            <h3>重要聲明</h3>
+            <p>本頁面為獨立營運的優惠導購網站，並非ITeSHOP官方網站或其授權代理。我們整理並分享ITeSHOP的公開優惠信息，協助用戶發現優質商品。所有商品價格、配送政策、退換貨條款、優惠活動等均以ITeSHOP官方網站（hk.iteshop.com）公佈的最新信息為準。用戶在購買前應仔細閱讀官網的相關條款。本站對任何因使用本站信息而產生的直接或間接損失不承擔責任。</p>
+        </div>
+    </section>
+
+    <!-- Share Section -->
+    <section class="share-section">
+        <div class="container">
+            <h3 class="share-title">分享給朋友</h3>
+            <div class="share-buttons">
+                <button class="share-btn" onclick="copyLink()" aria-label="複製連結">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"></path>
+                    </svg>
+                    複製連結
+                </button>
+                
+                <a href="https://wa.me/?text={{PAGE_URL}}" target="_blank" rel="noopener" class="share-btn" aria-label="分享到WhatsApp">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                    </svg>
+                    WhatsApp
+                </a>
+                
+                <a href="https://t.me/share/url?url={{PAGE_URL}}" target="_blank" rel="noopener" class="share-btn" aria-label="分享到Telegram">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M11.944 0A12 12 0 000 12a12 12 0 0012 12 12 12 0 0012-12A12 12 0 0012 0a12 12 0 00-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 01.171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+                    </svg>
+                    Telegram
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>關於本站</h4>
+                    <p>我們是獨立的優惠資訊分享平台，致力於為用戶提供ITeSHOP最新的優惠信息和購物指南。</p>
+                    <div class="social-links">
+                        <a href="{{SOCIAL_INSTAGRAM}}" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1112.324 0 6.162 6.162 0 01-12.324 0zM12 16a4 4 0 110-8 4 4 0 010 8zm4.965-10.405a1.44 1.44 0 112.881.001 1.44 1.44 0 01-2.881-.001z"/>
+                            </svg>
+                        </a>
+                        <a href="{{SOCIAL_FACEBOOK}}" target="_blank" rel="noopener" class="social-link" aria-label="Facebook">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="{{SOCIAL_YOUTUBE}}" target="_blank" rel="noopener" class="social-link" aria-label="YouTube">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>法律條款</h4>
+                    <p><a href="terms.html" aria-label="服務條款">服務條款</a></p>
+                    <p><a href="privacy.html" aria-label="隱私政策">隱私政策</a></p>
+                    <p><a href="disclaimer.html" aria-label="免責聲明">免責聲明</a></p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>聯絡我們</h4>
+                    <p>電郵：6633547@gmail.com</p>
+                    <p>營業時間：週一至週五 10:00-18:00</p>
+                    <p>（香港時間）</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 ITeSHOP優惠導購. 本站為獨立營運網站，與ITeSHOP無關聯。所有商標權歸原持有人所有。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Toggle
+        function toggleFAQ(element) {
+            const faqItem = element.parentElement;
+            const allItems = document.querySelectorAll('.faq-item');
+            
+            allItems.forEach(item => {
+                if (item !== faqItem) {
+                    item.classList.remove('active');
+                }
+            });
+            
+            faqItem.classList.toggle('active');
+        }
+        
+        // Copy Link Function
+        function copyLink() {
+            const dummy = document.createElement('input');
+            document.body.appendChild(dummy);
+            dummy.value = '{{PAGE_URL}}';
+            dummy.select();
+            document.execCommand('copy');
+            document.body.removeChild(dummy);
+            
+            // Show feedback
+            const btn = event.target.closest('.share-btn');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '✓ 已複製';
+            setTimeout(() => {
+                btn.innerHTML = originalText;
+            }, 2000);
+        }
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Performance optimization: Lazy load images
+        if ('loading' in HTMLImageElement.prototype) {
+            const images = document.querySelectorAll('img[loading="lazy"]');
+            images.forEach(img => {
+                img.src = img.src;
+            });
+        } else {
+            // Fallback for browsers that don't support lazy loading
+            const script = document.createElement('script');
+            script.src = 'https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js';
+            document.body.appendChild(script);
+        }
+    </script>
+</body>
+</html>
+
+
+
+
